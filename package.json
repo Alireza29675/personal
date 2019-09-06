@@ -3,7 +3,10 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "pm2:start": "NODE_ENV=production pm2 start --name personal npm -- start",
+    "pm2:restart": "pm2 restart personal",
+    "pm2:stop": "pm2 stop personal"
   },
   "dependencies": {
     "next": "^9.0.2",
