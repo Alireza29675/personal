@@ -8,6 +8,6 @@
     "allowJs": true,
     "jsx": "react",
     "jsxFactory": "h",
-    "lib": ["es6", "es7", "DOM"]
+    "lib": ["es6", "es7", "dom"]
   }
 }

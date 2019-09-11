@@ -1,4 +1,8 @@
 import { h, render } from "preact";
-import Main from "./components/main";
 
-render(<Main />, document.querySelector("#root"));
+const App = () => {
+
+    return <h1>This App</h1>
+}
+
+render(<App />, document.querySelector("#root"));
