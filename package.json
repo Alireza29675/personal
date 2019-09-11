@@ -1,15 +1,21 @@
 {
   "name": "personal-website",
   "version": "0.1.0",
-  "description": "Personal Website",
+  "description": "Alireza Sheikholmolouki | Software Developer",
   "scripts": {
+    "start": "node index.js",
+    "setup": "yarn && yarn prod",
     "build": "rollup -c ./config/rollup.config.dev.js",
     "prod": "rollup -c ./config/rollup.config.prod.js"
   },
+  "main": "index.js",
   "author": "Alireza Sheikholmolouki",
-  "license": "MIT",
   "dependencies": {
-    "preact": "^8.5.2"
+    "chalk": "^2.4.2",
+    "compression": "^1.7.4",
+    "express": "^4.17.1",
+    "preact": "10.0.0-beta.2",
+    "pug": "^2.0.4"
   },
   "devDependencies": {
     "rollup": "^1.21.2",
@@ -20,5 +26,6 @@
     "rollup-plugin-typescript": "^1.0.1",
     "tslib": "^1.10.0",
     "typescript": "^3.6.3"
-  }
+  },
+  "license": "MIT"
 }
