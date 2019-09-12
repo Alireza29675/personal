@@ -1,10 +1,11 @@
-import { h, render } from "preact";
-import { useState } from 'preact/hooks'
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-const App = () => {
-    const [message] = useState('Alireza Sheikholmolouki Website')
+import './stylesheets/main.scss'
+import App from './components/App'
 
-    return <h1>{message}</h1>
-}
+import * as serviceWorker from './serviceWorker';
 
-render(<App />, document.querySelector("#root"));
+ReactDOM.render(<App />, document.getElementById('root'));
+
+serviceWorker.unregister();
