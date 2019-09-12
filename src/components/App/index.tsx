@@ -35,7 +35,7 @@ export default class extends Component<IProps, IState> {
         return (
             <div className="App">
                 <h1 className="App__title">
-                    <span>Alireza</span><span> </span>
+                    <span>Alireza</span><br />
                     <span>Sheikholmolouki</span>
                     <strong>Creative coder from middle-east</strong>
                 </h1>
