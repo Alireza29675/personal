@@ -1,4 +1,4 @@
-import React from 'react'
+import { h, Component } from 'preact'
 
 import Wallpaper from './Wallpaper'
 import './style.scss'
@@ -9,7 +9,7 @@ interface IState {
     height: number
 }
 
-export default class extends React.Component<IProps, IState> {
+export default class extends Component<IProps, IState> {
 
     state = {
         width: window.innerWidth,

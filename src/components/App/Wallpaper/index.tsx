@@ -1,8 +1,8 @@
-import React, { RefObject } from 'react'
-import { Application, Sprite, filters } from 'pixi.js'
+import { h, Component, createRef, RefObject } from 'preact'
 import chaser from 'chaser'
-
 import './style.scss'
+
+const { Application, filters, Sprite } = PIXI
 
 interface IProps {
     width: number,
@@ -10,7 +10,7 @@ interface IProps {
 }
 interface IState {}
 
-export default class extends React.Component<IProps, IState> {
+export default class extends Component<IProps, IState> {
 
     mouse: {x: number, y: number} = { x: 0, y: 0}
     target: {x: Chaser, y: Chaser} = {
@@ -19,18 +19,18 @@ export default class extends React.Component<IProps, IState> {
     }
     time = 0;
 
-    app: Application = new Application({ width: window.innerWidth, height: window.innerHeight });
-    container:RefObject<HTMLDivElement> = React.createRef<HTMLDivElement>()
+    app: PIXI.Application = new Application({ width: window.innerWidth, height: window.innerHeight });
+    container:RefObject<HTMLDivElement> = createRef<HTMLDivElement>()
 
-    image: Sprite = Sprite.from("/images/photo.jpg")
-    depthMap: Sprite = Sprite.from("/images/diffuse-map.jpg")
+    image: PIXI.Sprite = Sprite.from("/images/photo.jpg")
+    depthMap: PIXI.Sprite = Sprite.from("/images/diffuse-map.jpg")
 
-    noiseFilter: filters.NoiseFilter = new filters.NoiseFilter(0.2);
-    displacementFilter: filters.DisplacementFilter = new filters.DisplacementFilter(this.depthMap);
+    noiseFilter: PIXI.filters.NoiseFilter = new filters.NoiseFilter(0.2);
+    displacementFilter: PIXI.filters.DisplacementFilter = new filters.DisplacementFilter(this.depthMap);
 
     componentDidMount () {
         if (this.container.current) {
-            this.app.resizeTo = this.container.current;
+            (this.app as any).resizeTo = this.container.current;
             this.container.current.appendChild(this.app.view);
             this.init()
         }
