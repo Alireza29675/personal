@@ -1,3 +1,4 @@
+import path from 'path'
 import typescript from 'rollup-plugin-typescript'
 import resolve from 'rollup-plugin-node-resolve'
 import commonjs from 'rollup-plugin-commonjs'
@@ -7,7 +8,7 @@ const app = {
     input: 'src/index.tsx',
     output: {
         name: 'app',
-        file: __dirname + '/public/app.js',
+        file: path.resolve(__dirname, '../public/app.js'),
         format: 'iife',
     }
 }

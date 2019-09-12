@@ -6,7 +6,8 @@
     "start": "node index.js",
     "setup": "yarn && yarn prod",
     "build": "rollup -c ./config/rollup.config.dev.js",
-    "prod": "rollup -c ./config/rollup.config.prod.js"
+    "prod": "rollup -c ./config/rollup.config.prod.js",
+    "dev": "rollup -c  ./config/rollup.config.dev.js -w"
   },
   "main": "index.js",
   "author": "Alireza Sheikholmolouki",
@@ -18,6 +19,7 @@
     "pug": "^2.0.4"
   },
   "devDependencies": {
+    "pre-push": "^0.1.1",
     "rollup": "^1.21.2",
     "rollup-plugin-bundle-size": "^1.0.3",
     "rollup-plugin-commonjs": "^10.1.0",
@@ -26,6 +28,9 @@
     "rollup-plugin-typescript": "^1.0.1",
     "tslib": "^1.10.0",
     "typescript": "^3.6.3"
+  },
+  "pre-push": {
+    "run": ["prod"]
   },
   "license": "MIT"
 }

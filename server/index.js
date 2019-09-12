@@ -5,7 +5,7 @@ const chalk = require('chalk')
 module.exports = ({ port, info }) => {
     const app = express()
 
-    app.set('views', './views')
+    app.set('views', './server/views')
     app.set('view engine', 'pug')
     app.use(express.static('public'))
     app.use(compression())

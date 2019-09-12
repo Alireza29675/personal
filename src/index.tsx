@@ -2,9 +2,9 @@ import { h, render } from "preact";
 import { useState } from 'preact/hooks'
 
 const App = () => {
-    const [n] = useState(0)
+    const [message] = useState('Alireza Sheikholmolouki Website')
 
-    return <h1>{n}</h1>
+    return <h1>{message}</h1>
 }
 
 render(<App />, document.querySelector("#root"));
