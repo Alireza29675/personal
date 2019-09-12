@@ -8,7 +8,7 @@ const app = {
     input: 'src/index.tsx',
     output: {
         name: 'app',
-        file: path.resolve(__dirname, '../public/app.js'),
+        file: path.resolve(__dirname, '../public/bundle.js'),
         format: 'iife',
     }
 }
