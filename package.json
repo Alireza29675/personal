@@ -7,7 +7,10 @@
     "setup": "yarn && yarn prod",
     "build": "rollup -c ./config/rollup.config.dev.js",
     "prod": "rollup -c ./config/rollup.config.prod.js",
-    "dev": "rollup -c  ./config/rollup.config.dev.js -w"
+    "dev": "rollup -c  ./config/rollup.config.dev.js -w",
+    "pm2:start": "pm2 start pm2.json",
+    "pm2:restart": "pm2 restart pm2.json",
+    "pm2:stop": "pm2 stop pm2.json"
   },
   "main": "index.js",
   "author": "Alireza Sheikholmolouki",

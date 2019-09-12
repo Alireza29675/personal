@@ -1,0 +1,9 @@
+{
+    "apps": [
+        {
+            "name": "personal",
+            "script": "yarn",
+            "args": "start"
+        }
+    ]
+}
